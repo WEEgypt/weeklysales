@@ -43,6 +43,10 @@ input[type="text"],
 button {
     float: right;
 }
+.agentName {
+    width: -webkit-fill-available !important;
+    width: -moz-available !important;
+}
 select {
     width: -webkit-fill-available !important;
     width: -moz-available !important;
@@ -53,10 +57,6 @@ select:focus {
 .mainDiv {
     background-color: var(--mainDiv);
     padding: 34px 34px 34px 34px;
-}
-.agentName {
-    width: -webkit-fill-available !important;
-    width: -moz-available !important;
 }
 .footer {
     text-align: center;
@@ -69,10 +69,6 @@ select:focus {
 }
 .space {
     height: 10px;
-}
-.date {
-    width: -webkit-fill-available !important;
-    width: -moz-available !important;
 }
 input[type="number"] {
     -moz-appearance: textfield;
