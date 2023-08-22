@@ -63,12 +63,11 @@ select:focus {
     font-size: 9px;
     padding-top: 8px;
 }
-.header {
-    text-align: left;
-    font-size: 12px;
-}
 .space {
     height: 10px;
+}
+.header {
+    height: 36px;
 }
 input[type="number"] {
     -moz-appearance: textfield;
