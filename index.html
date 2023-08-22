@@ -103,9 +103,19 @@
                     </tr>
                     <tr>
                         <td><label>Agent</label></td>
-                        <td colspan="2"><input type="text" class="agentName" name="Agent" id="agent" placeholder="Enter your name" /></td>
+                        <td colspan="2"><input type="text" class="Agent-Name" name="Agent Name" id="Agent Name" placeholder="Enter your name" /></td>
                     </tr>
-                    <input type="text" name="Date" id="Date" hidden />
+                    <input type="text" name="Sales Till" id="Sales Till" hidden />
+                    <input type="number" name="Mobile ACH" id="Mobile ACH" hidden />
+                    <input type="number" name="Mobile TARGET" id="Mobile TARGET" hidden />
+                    <input type="text" name="Mobile VS" id="Mobile VS" hidden />
+                    <input type="text" name="Mobile RE" id="Mobile RE" hidden />
+                    <input type="text" name="Indigo VS" id="Indigo VS" hidden />
+                    <input type="text" name="Indigo RE" id="Indigo RE" hidden />
+                    <input type="text" name="ADSL VS" id="ADSL VS" hidden />
+                    <input type="text" name="ADSL RE" id="ADSL RE" hidden />
+                    <input type="text" name="Fixed VS" id="Fixed VS" hidden />
+                    <input type="text" name="Fixed RE" id="Fixed RE" hidden />
                     <tr>
                         <td class="space"></td>
                         <td class="space"></td>
@@ -180,8 +190,8 @@
                 if (document.getElementById("store").value == "") {
                     document.getElementById("store").focus();
                     return false;
-                } else if (document.getElementById("agent").value == "") {
-                    document.getElementById("agent").focus();
+                } else if (document.getElementById("Agent Name").value == "") {
+                    document.getElementById("Agent Name").focus();
                     return false;
                 } else if (document.getElementById("PAYG ACH").value == "") {
                     document.getElementById("PAYG ACH").focus();
@@ -253,9 +263,35 @@
                 document.getElementById("checkandsubmit").innerHTML = "Sending";
                 e.preventDefault();
                 var scriptURL = "https://script.google.com/macros/s/AKfycbxUyT6Yj1yaHRgtjo9k2VAJQCWIaHlyWhbEsM5KwqiClYgg_82q5V52m1PbJ6mvqHcNvw/exec?sheetName=Weekly";
-                document.getElementById("Date").value = document.getElementById("day").value + "/" + document.getElementById("month").value + "/" + document.getElementById("year").value;
-                var store = document.getElementById("store").value;
-                var agent = document.getElementById("agent").value;
+                document.getElementById("Sales Till").value = document.getElementById("day").value + "/" + document.getElementById("month").value + "/" + document.getElementById("year").value;
+                document.getElementById("Mobile ACH").value =
+                    Number(document.getElementById("PAYG ACH").value) +
+                    Number(document.getElementById("Data ACH").value) +
+                    Number(document.getElementById("Kix ACH").value) +
+                    Number(document.getElementById("Tazbeet ACH").value) +
+                    Number(document.getElementById("We Club ACH").value) +
+                    Number(document.getElementById("We Mix ACH").value) +
+                    Number(document.getElementById("Indigo ACH").value);
+                document.getElementById("Mobile TARGET").value =
+                    Number(document.getElementById("PAYG TARGET").value) +
+                    Number(document.getElementById("Data TARGET").value) +
+                    Number(document.getElementById("Kix TARGET").value) +
+                    Number(document.getElementById("Tazbeet TARGET").value) +
+                    Number(document.getElementById("We Club TARGET").value) +
+                    Number(document.getElementById("We Mix TARGET").value) +
+                    Number(document.getElementById("Indigo TARGET").value);
+                var day = parseInt(document.getElementById("day").value);
+                var month = parseInt(document.getElementById("month").value);
+                var year = parseInt(document.getElementById("year").value);
+                var daysinmonth = new Date(year, month, 0).getDate();
+                document.getElementById("Mobile VS").value = Math.round((document.getElementById("Mobile ACH").value / document.getElementById("Mobile TARGET").value) * 100) + "%";
+                document.getElementById("Mobile RE").value = Math.round((((document.getElementById("Mobile ACH").value / document.getElementById("Mobile TARGET").value) * 100) / day) * daysinmonth) + "%";
+                document.getElementById("Indigo VS").value = Math.round((document.getElementById("Indigo ACH").value / document.getElementById("Indigo TARGET").value) * 100) + "%";
+                document.getElementById("Indigo RE").value = Math.round((((document.getElementById("Indigo ACH").value / document.getElementById("Indigo TARGET").value) * 100) / day) * daysinmonth) + "%";
+                document.getElementById("ADSL VS").value = Math.round((document.getElementById("ADSL ACH").value / document.getElementById("ADSL TARGET").value) * 100) + "%";
+                document.getElementById("ADSL RE").value = Math.round((((document.getElementById("ADSL ACH").value / document.getElementById("ADSL TARGET").value) * 100) / day) * daysinmonth) + "%";
+                document.getElementById("Fixed VS").value = Math.round((document.getElementById("Fixed ACH").value / document.getElementById("Fixed TARGET").value) * 100) + "%";
+                document.getElementById("Fixed RE").value = Math.round((((document.getElementById("Fixed ACH").value / document.getElementById("Fixed TARGET").value) * 100) / day) * daysinmonth) + "%";
                 fetch(scriptURL, { method: "POST", body: new FormData(Agent) })
                     .then((response) => (document.getElementById("checkandsubmit").innerHTML = "Sent"))
                     .catch((error) => (document.getElementById("checkandsubmit").innerHTML = "Error!"));

@@ -43,7 +43,7 @@ input[type="text"],
 button {
     float: right;
 }
-.agentName {
+.Agent-Name {
     width: -webkit-fill-available !important;
     width: -moz-available !important;
 }
