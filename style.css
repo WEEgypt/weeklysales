@@ -44,7 +44,8 @@ button {
     float: right;
 }
 select {
-    width: 70px;
+    width: -webkit-fill-available !important;
+    width: -moz-available !important;
 }
 select:focus {
     outline-style: auto;
@@ -52,10 +53,6 @@ select:focus {
 .mainDiv {
     background-color: var(--mainDiv);
     padding: 34px 34px 34px 34px;
-}
-.selStore {
-    width: -webkit-fill-available !important;
-    width: -moz-available !important;
 }
 .agentName {
     width: -webkit-fill-available !important;
@@ -72,6 +69,10 @@ select:focus {
 }
 .space {
     height: 10px;
+}
+.date {
+    width: -webkit-fill-available !important;
+    width: -moz-available !important;
 }
 input[type="number"] {
     -moz-appearance: textfield;
