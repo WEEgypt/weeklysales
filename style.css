@@ -34,7 +34,7 @@ label {
     width: 75px;
 }
 td {
-    height: 28px;
+    padding: 4px 3px 4px 3px;
 }
 input[type="text"],
 [type="number"] {
