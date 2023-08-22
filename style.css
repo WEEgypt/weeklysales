@@ -36,7 +36,7 @@ p {
 }
 label {
     display: inline-block;
-    width: 64px;
+    width: 75px;
 }
 td {
     height: 28px;
@@ -64,10 +64,6 @@ select:focus {
 .agentName {
     width: -webkit-fill-available !important;
     width: -moz-available !important;
-}
-.loading {
-    display: inline;
-    color: transparent;
 }
 .footer {
     text-align: center;
