@@ -70,6 +70,9 @@ select:focus {
     text-align: left;
     font-size: 12px;
 }
+.space {
+    height: 10px;
+}
 input[type="number"] {
     -moz-appearance: textfield;
     appearance: textfield;
