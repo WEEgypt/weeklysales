@@ -41,7 +41,8 @@ label {
 td {
     height: 28px;
 }
-input[type="text"] {
+input[type="text"],
+[type="number"] {
     width: 100px;
 }
 button {
@@ -73,4 +74,14 @@ select:focus {
 .header {
     text-align: left;
     font-size: 12px;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+    margin: 0;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
