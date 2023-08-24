@@ -175,18 +175,21 @@
                 <br />
                 <input style="display: none;" id="submit" type="submit" value="Submit" />
                 <button type="button" id="checkandsubmit" onclick="checkInput()">Submit</button>
+                <button type="button" id="another" onclick="Another()" hidden>Another one</button>
                 <br />
                 <br />
             </form>
         </div>
         <script>
             function GetDate() {
-                document.getElementById("day").value = new Date().getDate();
                 document.getElementById("month").value = new Date().getMonth() + 1;
                 document.getElementById("year").value = new Date().getFullYear();
             }
             function checkInput() {
-                if (document.getElementById("store").value == "") {
+                if (document.getElementById("day").value == "") {
+                    document.getElementById("day").focus();
+                    return false;
+                } else if (document.getElementById("store").value == "") {
                     document.getElementById("store").focus();
                     return false;
                 } else if (document.getElementById("Agent Name").value == "") {
@@ -292,9 +295,29 @@
                 document.getElementById("Fixed VS").value = Math.round((document.getElementById("Fixed ACH").value / document.getElementById("Fixed TARGET").value) * 100) + "%";
                 document.getElementById("Fixed RE").value = Math.round((((document.getElementById("Fixed ACH").value / document.getElementById("Fixed TARGET").value) * 100) / day) * daysinmonth) + "%";
                 fetch(scriptURL, { method: "POST", body: new FormData(Agent) })
-                    .then((response) => (document.getElementById("checkandsubmit").innerHTML = "Sent"))
+                    .then((response) => {
+                        Sent();
+                    })
                     .catch((error) => (document.getElementById("checkandsubmit").innerHTML = "Error!"));
             });
+            function Sent() {
+                document.getElementById("checkandsubmit").innerHTML = "Sent";
+                another.style.display = "block";
+            }
+            function Another() {
+                another.style.display = "none";
+                document.getElementById("checkandsubmit").disabled = false;
+                document.getElementById("Agent Name").value = "";
+                document.getElementById("PAYG ACH").value = "";
+                document.getElementById("Data ACH").value = "";
+                document.getElementById("Kix ACH").value = "";
+                document.getElementById("Tazbeet ACH").value = "";
+                document.getElementById("We Club ACH").value = "";
+                document.getElementById("We Mix ACH").value = "";
+                document.getElementById("Indigo ACH").value = "";
+                document.getElementById("ADSL ACH").value = "";
+                document.getElementById("Fixed ACH").value = "";
+            }
         </script>
         <br />
         <footer>
