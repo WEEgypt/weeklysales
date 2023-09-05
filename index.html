@@ -16,7 +16,7 @@
                     <tr>
                         <td><label>Sales Till</label></td>
                         <td>
-                            <select id="day">
+                            <select tabindex="1" id="day">
                                 <option value="" selected disabled hidden>Day</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
@@ -52,7 +52,7 @@
                             </select>
                         </td>
                         <td>
-                            <select id="month">
+                            <select tabindex="2" id="month">
                                 <option value="" selected disabled hidden>Month</option>
                                 <option value="1">January</option>
                                 <option value="2">February</option>
@@ -75,7 +75,7 @@
                     <tr>
                         <td><label>Store</label></td>
                         <td colspan="2">
-                            <select name="Store" id="store">
+                            <select tabindex="3" name="Store" id="store">
                                 <option value="" selected disabled hidden>Store Name</option>
                                 <option value="شرق النيل">شرق النيل</option>
                                 <option value="نادى التجديف">نادى التجديف</option>
@@ -103,15 +103,16 @@
                     </tr>
                     <tr>
                         <td><label>Agent</label></td>
-                        <td colspan="2"><input type="text" class="Agent-Name" name="Agent Name" id="Agent Name" placeholder="Enter your name" /></td>
+                        <td colspan="2"><input tabindex="4" type="text" class="Agent-Name" name="Agent Name" id="Agent Name" placeholder="Enter your name" /></td>
                     </tr>
                     <input type="text" name="Sales Till" id="Sales Till" hidden />
                     <input type="number" name="Mobile ACH" id="Mobile ACH" hidden />
                     <input type="number" name="Mobile TARGET" id="Mobile TARGET" hidden />
                     <input type="text" name="Mobile VS" id="Mobile VS" hidden />
                     <input type="text" name="Mobile RE" id="Mobile RE" hidden />
-                    <input type="text" name="Indigo VS" id="Indigo VS" hidden />
-                    <input type="text" name="Indigo RE" id="Indigo RE" hidden />
+                    <input type="text" name="Postpaid ACH" id="Postpaid ACH" hidden />
+                    <input type="text" name="Postpaid VS" id="Postpaid VS" hidden />
+                    <input type="text" name="Postpaid RE" id="Postpaid RE" hidden />
                     <input type="text" name="ADSL VS" id="ADSL VS" hidden />
                     <input type="text" name="ADSL RE" id="ADSL RE" hidden />
                     <input type="text" name="Fixed VS" id="Fixed VS" hidden />
@@ -128,48 +129,52 @@
                     </tr>
                     <tr>
                         <td><label>PAYG</label></td>
-                        <td><input type="number" name="PAYG ACH" id="PAYG ACH" /></td>
-                        <td><input type="number" name="PAYG TARGET" id="PAYG TARGET" /></td>
+                        <td><input tabindex="5" type="number" name="PAYG ACH" id="PAYG ACH" /></td>
+                        <td><input tabindex="6" type="number" name="PAYG TARGET" id="PAYG TARGET" /></td>
                     </tr>
                     <tr>
                         <td><label>Data</label></td>
-                        <td><input type="number" name="Data ACH" id="Data ACH" /></td>
-                        <td><input type="number" name="Data TARGET" id="Data TARGET" /></td>
+                        <td><input tabindex="7" type="number" name="Data ACH" id="Data ACH" /></td>
+                        <td><input tabindex="8" type="number" name="Data TARGET" id="Data TARGET" /></td>
                     </tr>
                     <tr>
                         <td><label>Kix</label></td>
-                        <td><input type="number" name="Kix ACH" id="Kix ACH" /></td>
-                        <td><input type="number" name="Kix TARGET" id="Kix TARGET" /></td>
+                        <td><input tabindex="9" type="number" name="Kix ACH" id="Kix ACH" /></td>
+                        <td><input tabindex="10" type="number" name="Kix TARGET" id="Kix TARGET" /></td>
                     </tr>
                     <tr>
                         <td><label>Tazbeet</label></td>
-                        <td><input type="number" name="Tazbeet ACH" id="Tazbeet ACH" /></td>
-                        <td><input type="number" name="Tazbeet TARGET" id="Tazbeet TARGET" /></td>
+                        <td><input tabindex="11" type="number" name="Tazbeet ACH" id="Tazbeet ACH" /></td>
+                        <td><input tabindex="12" type="number" name="Tazbeet TARGET" id="Tazbeet TARGET" /></td>
                     </tr>
                     <tr>
                         <td><label>We Club</label></td>
-                        <td><input type="number" name="We Club ACH" id="We Club ACH" /></td>
-                        <td><input type="number" name="We Club TARGET" id="We Club TARGET" /></td>
+                        <td><input tabindex="13" type="number" name="We Club ACH" id="We Club ACH" /></td>
+                        <td><input tabindex="14" type="number" name="We Club TARGET" id="We Club TARGET" /></td>
                     </tr>
                     <tr>
                         <td><label>We Mix</label></td>
-                        <td><input type="number" name="We Mix ACH" id="We Mix ACH" /></td>
-                        <td><input type="number" name="We Mix TARGET" id="We Mix TARGET" /></td>
+                        <td><input tabindex="15" type="number" name="We Mix ACH" id="We Mix ACH" /></td>
+                        <td><input tabindex="16" type="number" name="We Mix TARGET" id="We Mix TARGET" /></td>
+                    </tr>
+                    <tr>
+                        <td><label>We Gold</label></td>
+                        <td><input tabindex="17" type="number" name="We Gold ACH" id="We Gold ACH" /></td>
+                        <td rowspan="2"><input tabindex="19" type="number" name="Postpaid TARGET" id="Postpaid TARGET" /></td>
                     </tr>
                     <tr>
                         <td><label>Indigo</label></td>
-                        <td><input type="number" name="Indigo ACH" id="Indigo ACH" /></td>
-                        <td><input type="number" name="Indigo TARGET" id="Indigo TARGET" /></td>
+                        <td><input tabindex="18" type="number" name="Indigo ACH" id="Indigo ACH" /></td>
                     </tr>
                     <tr>
                         <td><label>ADSL</label></td>
-                        <td><input type="number" name="ADSL ACH" id="ADSL ACH" /></td>
-                        <td><input type="number" name="ADSL TARGET" id="ADSL TARGET" /></td>
+                        <td><input tabindex="20" type="number" name="ADSL ACH" id="ADSL ACH" /></td>
+                        <td><input tabindex="21" type="number" name="ADSL TARGET" id="ADSL TARGET" /></td>
                     </tr>
                     <tr>
                         <td><label>Fixed</label></td>
-                        <td><input type="number" name="Fixed ACH" id="Fixed ACH" /></td>
-                        <td><input type="number" name="Fixed TARGET" id="Fixed TARGET" /></td>
+                        <td><input tabindex="22" type="number" name="Fixed ACH" id="Fixed ACH" /></td>
+                        <td><input tabindex="23" type="number" name="Fixed TARGET" id="Fixed TARGET" /></td>
                     </tr>
                 </table>
                 <br />
@@ -231,11 +236,14 @@
                 } else if (document.getElementById("We Mix TARGET").value == "") {
                     document.getElementById("We Mix TARGET").focus();
                     return false;
+                } else if (document.getElementById("We Gold ACH").value == "") {
+                    document.getElementById("We Gold ACH").focus();
+                    return false;
                 } else if (document.getElementById("Indigo ACH").value == "") {
                     document.getElementById("Indigo ACH").focus();
                     return false;
-                } else if (document.getElementById("Indigo TARGET").value == "") {
-                    document.getElementById("Indigo TARGET").focus();
+                } else if (document.getElementById("Postpaid TARGET").value == "") {
+                    document.getElementById("Postpaid TARGET").focus();
                     return false;
                 } else if (document.getElementById("ADSL ACH").value == "") {
                     document.getElementById("ADSL ACH").focus();
@@ -259,8 +267,8 @@
                     e.preventDefault();
                 }
             };
-            const form1 = document.forms["Agent"];
-            form1.addEventListener("submit", (e) => {
+            const salesform = document.forms["Agent"];
+            salesform.addEventListener("submit", (e) => {
                 document.getElementById("checkandsubmit").disabled = true;
                 document.getElementById("checkandsubmit").innerHTML = "Sending";
                 e.preventDefault();
@@ -273,6 +281,7 @@
                     Number(document.getElementById("Tazbeet ACH").value) +
                     Number(document.getElementById("We Club ACH").value) +
                     Number(document.getElementById("We Mix ACH").value) +
+                    Number(document.getElementById("We Gold ACH").value) +
                     Number(document.getElementById("Indigo ACH").value);
                 document.getElementById("Mobile TARGET").value =
                     Number(document.getElementById("PAYG TARGET").value) +
@@ -281,15 +290,16 @@
                     Number(document.getElementById("Tazbeet TARGET").value) +
                     Number(document.getElementById("We Club TARGET").value) +
                     Number(document.getElementById("We Mix TARGET").value) +
-                    Number(document.getElementById("Indigo TARGET").value);
+                    Number(document.getElementById("Postpaid TARGET").value);
+                document.getElementById("Postpaid ACH").value = Number(document.getElementById("We Gold ACH").value) + Number(document.getElementById("Indigo ACH").value);
                 var day = parseInt(document.getElementById("day").value);
                 var month = parseInt(document.getElementById("month").value);
                 var year = parseInt(document.getElementById("year").value);
                 var daysinmonth = new Date(year, month, 0).getDate();
                 document.getElementById("Mobile VS").value = Math.round((document.getElementById("Mobile ACH").value / document.getElementById("Mobile TARGET").value) * 100) + "%";
                 document.getElementById("Mobile RE").value = Math.round((((document.getElementById("Mobile ACH").value / document.getElementById("Mobile TARGET").value) * 100) / day) * daysinmonth) + "%";
-                document.getElementById("Indigo VS").value = Math.round((document.getElementById("Indigo ACH").value / document.getElementById("Indigo TARGET").value) * 100) + "%";
-                document.getElementById("Indigo RE").value = Math.round((((document.getElementById("Indigo ACH").value / document.getElementById("Indigo TARGET").value) * 100) / day) * daysinmonth) + "%";
+                document.getElementById("Postpaid VS").value = Math.round((document.getElementById("Postpaid ACH").value / document.getElementById("Postpaid TARGET").value) * 100) + "%";
+                document.getElementById("Postpaid RE").value = Math.round((((document.getElementById("Postpaid ACH").value / document.getElementById("Postpaid TARGET").value) * 100) / day) * daysinmonth) + "%";
                 document.getElementById("ADSL VS").value = Math.round((document.getElementById("ADSL ACH").value / document.getElementById("ADSL TARGET").value) * 100) + "%";
                 document.getElementById("ADSL RE").value = Math.round((((document.getElementById("ADSL ACH").value / document.getElementById("ADSL TARGET").value) * 100) / day) * daysinmonth) + "%";
                 document.getElementById("Fixed VS").value = Math.round((document.getElementById("Fixed ACH").value / document.getElementById("Fixed TARGET").value) * 100) + "%";
@@ -314,6 +324,7 @@
                 document.getElementById("Tazbeet ACH").value = "";
                 document.getElementById("We Club ACH").value = "";
                 document.getElementById("We Mix ACH").value = "";
+                document.getElementById("We Gold ACH").value = "";
                 document.getElementById("Indigo ACH").value = "";
                 document.getElementById("ADSL ACH").value = "";
                 document.getElementById("Fixed ACH").value = "";
