@@ -28,6 +28,7 @@ body {
 }
 h2 {
     text-align: center;
+    padding: 0px 0px 10px 0px;
 }
 label {
     display: inline-block;
