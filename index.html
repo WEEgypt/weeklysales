@@ -306,12 +306,12 @@
                     e.preventDefault();
                 }
             };
-            const salesform = document.forms["Agent"];
-            salesform.addEventListener("submit", (e) => {
+            const ScriptURL = "https://script.google.com/macros/s/AKfycbwiq-WU1DufWXco0VqpoFlijVavMHaVhqwaNKLilCnRDCxBgiFyy435QDZgaRle9p2cPg/exec?sheetName=Weekly";
+            const salesForm = document.forms["Agent"];
+            salesForm.addEventListener("submit", (e) => {
                 document.getElementById("checkandsubmit").disabled = true;
                 document.getElementById("checkandsubmit").innerHTML = "Sending";
                 e.preventDefault();
-                var scriptURL = "https://script.google.com/macros/s/AKfycbwiq-WU1DufWXco0VqpoFlijVavMHaVhqwaNKLilCnRDCxBgiFyy435QDZgaRle9p2cPg/exec?sheetName=Weekly";
                 document.getElementById("Sales Till").value = document.getElementById("day").value + "/" + document.getElementById("month").value + "/" + document.getElementById("year").value;
                 document.getElementById("Mobile ACH").value =
                     Number(document.getElementById("PAYG ACH").value) +
@@ -341,7 +341,7 @@
                 document.getElementById("ADSL RE").value = Math.round((((document.getElementById("ADSL ACH").value / document.getElementById("ADSL TARGET").value) * 100) / day) * daysinmonth) + "%";
                 document.getElementById("Fixed VS").value = Math.round((document.getElementById("Fixed ACH").value / document.getElementById("Fixed TARGET").value) * 100) + "%";
                 document.getElementById("Fixed RE").value = Math.round((((document.getElementById("Fixed ACH").value / document.getElementById("Fixed TARGET").value) * 100) / day) * daysinmonth) + "%";
-                fetch(scriptURL, { method: "POST", body: new FormData(Agent) })
+                fetch(ScriptURL, { method: "POST", body: new FormData(Agent) })
                     .then((response) => {
                         Sent();
                     })
