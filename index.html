@@ -342,6 +342,30 @@
                 document.getElementById("ADSL RE").value = Math.round((((document.getElementById("ADSL ACH").value / document.getElementById("ADSL TARGET").value) * 100) / day) * daysinmonth) + "%";
                 document.getElementById("Fixed VS").value = Math.round((document.getElementById("Fixed ACH").value / document.getElementById("Fixed TARGET").value) * 100) + "%";
                 document.getElementById("Fixed RE").value = Math.round((((document.getElementById("Fixed ACH").value / document.getElementById("Fixed TARGET").value) * 100) / day) * daysinmonth) + "%";
+                if (document.getElementById("Mobile VS").value === Infinity + "%") {
+                    document.getElementById("Mobile VS").value = 0 + "%";
+                }
+                if (document.getElementById("Mobile RE").value === Infinity + "%") {
+                    document.getElementById("Mobile RE").value = 0 + "%";
+                }
+                if (document.getElementById("We Gold VS").value === Infinity + "%") {
+                    document.getElementById("We Gold VS").value = 0 + "%";
+                }
+                if (document.getElementById("We Gold RE").value === Infinity + "%") {
+                    document.getElementById("We Gold RE").value = 0 + "%";
+                }
+                if (document.getElementById("ADSL VS").value === Infinity + "%") {
+                    document.getElementById("ADSL VS").value = 0 + "%";
+                }
+                if (document.getElementById("ADSL RE").value === Infinity + "%") {
+                    document.getElementById("ADSL RE").value = 0 + "%";
+                }
+                if (document.getElementById("Fixed VS").value === Infinity + "%") {
+                    document.getElementById("Fixed VS").value = 0 + "%";
+                }
+                if (document.getElementById("Fixed RE").value === Infinity + "%") {
+                    document.getElementById("Fixed RE").value = 0 + "%";
+                }
                 fetch(ScriptURL, { method: "POST", body: new FormData(Agent) })
                     .then((response) => {
                         Sent();
