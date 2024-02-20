@@ -1,29 +1,24 @@
 :root {
-    --bg: #f2f2f2;
-    --mainDiv: #fff;
-    --color: #2d3737;
+    --bg: #fff;
+    --color: #000;
 }
 @media (prefers-color-scheme: dark) {
     :root {
         --bg: #000;
-        --mainDiv: #2d3737;
         --color: #fff;
     }
 }
 html {
     display: flex;
-    align-items: center;
-    justify-content: center;
     min-height: 100%;
 }
 body {
-    font-family: verdana;
-    font-size: 14px;
     margin: auto;
     min-width: max-content;
-    width: max-content;
+    padding: 20px;
+    font-family: verdana;
+    font-size: 14px;
     color: var(--color);
-    padding: 10px;
     background-color: var(--bg);
 }
 h2 {
@@ -31,22 +26,14 @@ h2 {
     padding: 0px 0px 10px 0px;
 }
 label {
-    display: inline-block;
-    width: 75px;
+    position: relative;
+    right: 5%;
 }
 td {
-    padding: 5px 3px 5px 3px;
-}
-input[type="text"],
-[type="number"] {
-    width: 84px;
+    height: 28px;
 }
 button {
     float: right;
-}
-.Agent-Name {
-    width: -webkit-fill-available !important;
-    width: -moz-available !important;
 }
 select {
     width: -webkit-fill-available !important;
@@ -55,20 +42,16 @@ select {
 select:focus {
     outline-style: auto;
 }
-.mainDiv {
-    background-color: var(--mainDiv);
-    padding: 34px 34px 25px 34px;
-}
-.footer {
-    text-align: center;
-    font-size: 9px;
-    padding-top: 8px;
+.Agent-Name {
+    width: -webkit-fill-available !important;
+    width: -moz-available !important;
 }
 .space {
-    height: 10px;
+    height: 4px;
 }
-.header {
-    height: 36px;
+input[type="text"],
+[type="number"] {
+    width: 84px;
 }
 input[type="number"] {
     -moz-appearance: textfield;
@@ -82,4 +65,12 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 #another {
     margin-right: 6px;
+}
+.header {
+    height: 36px;
+}
+.footer {
+    text-align: center;
+    font-size: 9px;
+    padding-top: 8px;
 }
