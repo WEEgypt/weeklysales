@@ -49,8 +49,7 @@ select:focus {
 .space {
     height: 4px;
 }
-input[type="text"],
-[type="number"] {
+input[type="number"] {
     width: 84px;
 }
 input[type="number"] {
